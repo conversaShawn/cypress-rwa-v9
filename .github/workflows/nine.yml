@@ -2,8 +2,6 @@ name: Cypress Tests
 
 on:
   push:
-    branches-ignore:
-      - "renovate/**"
 
 jobs:
   install:
@@ -90,6 +88,7 @@ jobs:
           browser: chrome
           record: true
           parallel: true
+          tag: v9,optimized
           group: "UI - Chrome"
           spec: cypress/tests/ui/*
         env:
@@ -133,6 +132,7 @@ jobs:
           browser: chrome
           record: true
           parallel: true
+          tag: v9,optimized
           group: "UI - Chrome - Mobile"
           spec: cypress/tests/ui/*
         env:
@@ -177,6 +177,7 @@ jobs:
           browser: firefox
           record: true
           parallel: true
+          tag: v9,optimized
           group: "UI - Firefox"
           spec: cypress/tests/ui/*
         env:
@@ -222,6 +223,7 @@ jobs:
           browser: firefox
           record: true
           parallel: true
+          tag: v9,optimized
           group: "UI - Firefox - Mobile"
           spec: cypress/tests/ui/*
         env:
@@ -262,6 +264,7 @@ jobs:
           wait-on-timeout: 120
           record: true
           parallel: true
+          tag: v9,optimized
           group: "UI - Electron - Windows"
           spec: cypress/tests/ui/*
         env:
